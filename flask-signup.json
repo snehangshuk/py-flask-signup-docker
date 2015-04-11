@@ -1,0 +1,22 @@
+{
+    "family": "flask-signup",
+    "containerDefinitions": [
+        {
+            "image": "your-repository/flask-signup:v_%BUILD_NUMBER%",
+            "name": "flask-signup",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "entryPoint": [
+                "/bin/sh",
+                "-c"
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 5000,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
